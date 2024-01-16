@@ -39,17 +39,23 @@ public:
 
     void print(ostream & ost, Node* node) {
         ost << node->data << endl;
-        if (node->left != NULL) {
-            print(ost, node->left);
-        }
         if (node->right != NULL) {
             print(ost, node->right);
         }
+        if (node->left != NULL) {
+            print(ost, node->left);
+        }
+       
     }
     friend ostream& operator<< (ostream& ost, Bin_Tree& bt) {
         bt.print(ost, bt.node);
         return ost;
     }
+
+    void add(int data) {
+
+    }
+
 };
 
 int main()
